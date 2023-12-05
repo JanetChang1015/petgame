@@ -9,12 +9,16 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play PetPulse.</tw-noscript></noscript></tw-story>
-<tw-storydata name="PetPulse" startnode="1" creator="Twine" creator-version="2.8.0" format="Harlowe" format-version="3.3.7" ifid="29F53263-7097-4C7F-9005-BCE8941632B6" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Intro Screen" tags="" position="300,300" size="100,100">Hello! Welcome to PetPulse, an pet life story board game. The objective of the game is to help your pet navigate its adoption process and increase to full health by getting to 100 health points. Your pet will start at 50 health points and you currently have 100 coins. Get your pet to 100 health points before you run out of money. If your pet&#39;s health decreases to 0 health points, you&#39;ll have to return it to the shelter.
+<tw-storydata name="PetPulse" startnode="1" creator="Twine" creator-version="2.8.0" format="Harlowe" format-version="3.3.7" ifid="29F53263-7097-4C7F-9005-BCE8941632B6" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Intro Screen" tags="" position="300,300" size="100,100">
+    <img src="1_start.png" width="800" height="600"><img>
+    Hello! Welcome to PetPulse, an pet life story board game. The objective of the game is to help your pet navigate its adoption process and increase to full health by getting to 100 health points. Your pet will start at 50 health points and you currently have 100 coins. Get your pet to 100 health points before you run out of money. If your pet&#39;s health decreases to 0 health points, you&#39;ll have to return it to the shelter.
 
 Come on inside the pet shelter to choose your pet! 
 [[Pet Shelter]]
 
-</tw-passagedata><tw-passagedata pid="2" name="Pet Shelter" tags="" position="500,300" size="100,100">Welcome to the pet shelter! We&#39;d love to help you adopt a pet today!
+</tw-passagedata><tw-passagedata pid="2" name="Pet Shelter" tags="" position="500,300" size="100,100">
+    <img src="2_pick.png" width="800" height="600"><img>
+    Welcome to the pet shelter! We&#39;d love to help you adopt a pet today!
 
 Choose from our three lovely pets to adopt.
 
@@ -26,7 +30,9 @@ Meet Rudolph, a reindeer who we&#39;ve adopted from the North Pole. Only availab
 
 (set: $money to 100)
 
-You have $money coins.</tw-passagedata><tw-passagedata pid="3" name="Dog Adoption" tags="" position="700,200" size="100,100">Thanks for adopting Mercury! We know you&#39;ll love him. He is as sweet as can be. You&#39;re really helping to turn his life around. 
+You have $money coins.</tw-passagedata><tw-passagedata pid="3" name="Dog Adoption" tags="" position="700,200" size="100,100">
+    <img src="Dog/3.png" width="800" height="600"><img> 
+    Thanks for adopting Mercury! We know you&#39;ll love him. He is as sweet as can be. You&#39;re really helping to turn his life around. 
 
 Now that you&#39;ve brought him home, you can do a few things to get to know Mercury.
 
@@ -38,7 +44,9 @@ Exercise Mercury! [[Exercise Dog]]
 (set: $health to 50)
 
 You have $money coins.
-Mercury has $health health points.</tw-passagedata><tw-passagedata pid="4" name="Pet Dog" tags="" position="900,100" size="100,100">How did you know? Mercury loves to be shown affection.
+Mercury has $health health points.</tw-passagedata><tw-passagedata pid="4" name="Pet Dog" tags="" position="900,100" size="100,100">
+    <img src="Dog/15.png" width="800" height="600"><img> 
+    How did you know? Mercury loves to be shown affection.
 
 He&#39;s already warming up to you.
 
@@ -53,7 +61,9 @@ Mercury has $health health points.
 
 (if: $health &lt;= 0)[(go-to:&quot;You Lose!&quot;)]
 (if: $health &gt;= 100)[(go-to:&quot;You Win!&quot;)]
-</tw-passagedata><tw-passagedata pid="5" name="Feed Dog" tags="" position="900,500" size="100,100">Mercury is already licking his lips in excitement! He&#39;s so hungry, thanks for feeding him!
+</tw-passagedata><tw-passagedata pid="5" name="Feed Dog" tags="" position="900,500" size="100,100">
+    <img src="Dog/4.png" width="800" height="600"><img> 
+    Mercury is already licking his lips in excitement! He&#39;s so hungry, thanks for feeding him!
 
 What would you like to fill his bowl with to make his tummy happy?
 
@@ -66,7 +76,9 @@ You have $money coins.
 Mercury has $health health points.
 
 (if: $health &lt;= 0)[(go-to:&quot;You Lose!&quot;)]
-(if: $health &gt;= 100)[(go-to:&quot;You Win!&quot;)]</tw-passagedata><tw-passagedata pid="6" name="Exercise Dog" tags="" position="900,1000" size="100,100">A very healthy choice! Mercury has so much energy from being pent up all day at the shelter. How would you like to let him exercise?
+(if: $health &gt;= 100)[(go-to:&quot;You Win!&quot;)]</tw-passagedata><tw-passagedata pid="6" name="Exercise Dog" tags="" position="900,1000" size="100,100">
+    <img src="Dog/33.png" width="800" height="600"><img>
+    A very healthy choice! Mercury has so much energy from being pent up all day at the shelter. How would you like to let him exercise?
 
 Walk him [[Walk Dog]]
 Let him run around in the yard [[Exercise Dog In Backyard]] 
@@ -75,7 +87,9 @@ You have $money coins.
 Mercury has $health health points.
 
 (if: $health &lt;= 0)[(go-to:&quot;You Lose!&quot;)]
-(if: $health &gt;= 100)[(go-to:&quot;You Win!&quot;)]</tw-passagedata><tw-passagedata pid="7" name="Belly Rub Dog" tags="" position="1100,200" size="100,100">Wow! Belly rubs are Mercury&#39;s favorite. He gives you kisses in return for showing him so much love!
+(if: $health &gt;= 100)[(go-to:&quot;You Win!&quot;)]</tw-passagedata><tw-passagedata pid="7" name="Belly Rub Dog" tags="" position="1100,200" size="100,100">
+    <img src="Dog/17.png" width="800" height="600"><img>
+    Wow! Belly rubs are Mercury&#39;s favorite. He gives you kisses in return for showing him so much love!
 
 Would you like to bring Mercury to the spa to have a self care day?
 
@@ -88,7 +102,9 @@ You have $money coins.
 Mercury has $health health points.
 
 (if: $health &lt;= 0)[(go-to:&quot;You Lose!&quot;)]
-(if: $health &gt;= 100)[(go-to:&quot;You Win!&quot;)]</tw-passagedata><tw-passagedata pid="8" name="Massage Dog" tags="" position="1100,0" size="100,100">Oops! This hurt Mercury! We know you are trying your best, but keep in mind Mercury is a shelter dog and scare to be massaged.
+(if: $health &gt;= 100)[(go-to:&quot;You Win!&quot;)]</tw-passagedata><tw-passagedata pid="8" name="Massage Dog" tags="" position="1100,0" size="100,100">
+    <img src="Dog/18.png" width="800" height="600"><img>
+    Oops! This hurt Mercury! We know you are trying your best, but keep in mind Mercury is a shelter dog and scare to be massaged.
 
 Would you like to bring Mercury to the spa to have a self care day?
 
@@ -101,7 +117,9 @@ You have $money coins.
 Mercury has $health health points.
 
 (if: $health &lt;= 0)[(go-to:&quot;You Lose!&quot;)]
-(if: $health &gt;= 100)[(go-to:&quot;You Win!&quot;)]</tw-passagedata><tw-passagedata pid="9" name="Brush Dog" tags="" position="1100,100" size="100,100">Aww! Mercury loves this. Thanks for giving him some love! He enjoys being groomed after having matted fur from the pet shelter.
+(if: $health &gt;= 100)[(go-to:&quot;You Win!&quot;)]</tw-passagedata><tw-passagedata pid="9" name="Brush Dog" tags="" position="1100,100" size="100,100">
+    <img src="Dog/16.png" width="800" height="600"><img>
+    Aww! Mercury loves this. Thanks for giving him some love! He enjoys being groomed after having matted fur from the pet shelter.
 
 Would you like to bring Mercury to the spa to have a self care day?
 
@@ -114,7 +132,9 @@ You have $money coins.
 Mercury has $health health points.
 
 (if: $health &lt;= 0)[(go-to:&quot;You Lose!&quot;)]
-(if: $health &gt;= 100)[(go-to:&quot;You Win!&quot;)]</tw-passagedata><tw-passagedata pid="10" name="Feed Dog Kibble" tags="" position="1100,400" size="100,100">Yummy! What a responsible pet owner you are. Mercury has already finished all his food! He was hungry!
+(if: $health &gt;= 100)[(go-to:&quot;You Win!&quot;)]</tw-passagedata><tw-passagedata pid="10" name="Feed Dog Kibble" tags="" position="1100,400" size="100,100">
+    <img src="Dog/5.png" width="800" height="600"><img>
+    Yummy! What a responsible pet owner you are. Mercury has already finished all his food! He was hungry!
 
 Would you like to feed him a little more?
 
@@ -128,7 +148,9 @@ You have $money coins.
 Mercury has $health health points.
 
 (if: $health &lt;= 0)[(go-to:&quot;You Lose!&quot;)]
-(if: $health &gt;= 100)[(go-to:&quot;You Win!&quot;)]</tw-passagedata><tw-passagedata pid="11" name="Feed Dog Carrots" tags="" position="1100,500" size="100,100">Yummy! You chose the healthy option! Mercury&#39;s health is improving by the second. Mercury has already finished all his food! He was hungry!
+(if: $health &gt;= 100)[(go-to:&quot;You Win!&quot;)]</tw-passagedata><tw-passagedata pid="11" name="Feed Dog Carrots" tags="" position="1100,500" size="100,100">
+    <img src="Dog/6.png" width="800" height="600"><img>
+    Yummy! You chose the healthy option! Mercury&#39;s health is improving by the second. Mercury has already finished all his food! He was hungry!
 
 Would you like to feed him a little more?
 
@@ -142,7 +164,9 @@ You have $money coins.
 Mercury has $health health points.
 
 (if: $health &lt;= 0)[(go-to:&quot;You Lose!&quot;)]
-(if: $health &gt;= 100)[(go-to:&quot;You Win!&quot;)]</tw-passagedata><tw-passagedata pid="12" name="Feed Dog Chicken Wings" tags="" position="1100,600" size="100,100">Oh no! That was yummy, but now Mercury has a tummy ache. He isn&#39;t used to having such delicious human food. 
+(if: $health &gt;= 100)[(go-to:&quot;You Win!&quot;)]</tw-passagedata><tw-passagedata pid="12" name="Feed Dog Chicken Wings" tags="" position="1100,600" size="100,100">
+    <img src="Dog/7.png" width="800" height="600"><img>
+    Oh no! That was yummy, but now Mercury has a tummy ache. He isn&#39;t used to having such delicious human food. 
 
 How would you like to help him feel better?
 
@@ -157,7 +181,9 @@ You have $money coins.
 Mercury has $health health points.
 
 (if: $health &lt;= 0)[(go-to:&quot;You Lose!&quot;)]
-(if: $health &gt;= 100)[(go-to:&quot;You Win!&quot;)]</tw-passagedata><tw-passagedata pid="13" name="Feed Dog Chocolate" tags="" position="1100,700" size="100,100">Oh no! That was yummy, but chocolate makes dog sick! Now Mercury has a severe tummy ache. Next time stick to a healthier option. 
+(if: $health &gt;= 100)[(go-to:&quot;You Win!&quot;)]</tw-passagedata><tw-passagedata pid="13" name="Feed Dog Chocolate" tags="" position="1100,700" size="100,100">
+    <img src="Dog/8.png" width="800" height="600"><img>
+    Oh no! That was yummy, but chocolate makes dog sick! Now Mercury has a severe tummy ache. Next time stick to a healthier option. 
 
 How would you like to help him feel better?
 
@@ -172,7 +198,9 @@ You have $money coins.
 Mercury has $health health points.
 
 (if: $health &lt;= 0)[(go-to:&quot;You Lose!&quot;)]
-(if: $health &gt;= 100)[(go-to:&quot;You Win!&quot;)]</tw-passagedata><tw-passagedata pid="14" name="Walk Dog" tags="" position="1100,1000" size="100,100">Mercury loves walks! He can sniff around and explore the great outdoors near his new home. Would you like to let Mercury roam free without a leash or put on his harness and leash to guide him on his walk?
+(if: $health &gt;= 100)[(go-to:&quot;You Win!&quot;)]</tw-passagedata><tw-passagedata pid="14" name="Walk Dog" tags="" position="1100,1000" size="100,100">
+    <img src="Dog/35.png" width="800" height="600"><img>
+    Mercury loves walks! He can sniff around and explore the great outdoors near his new home. Would you like to let Mercury roam free without a leash or put on his harness and leash to guide him on his walk?
 
 Walk him with a leash [[Walk Dog On Leash]] 
 Walk him without a leash [[Walk Dog Without Leash]] 
@@ -181,7 +209,9 @@ You have $money coins.
 Mercury has $health health points.
 
 (if: $health &lt;= 0)[(go-to:&quot;You Lose!&quot;)]
-(if: $health &gt;= 100)[(go-to:&quot;You Win!&quot;)]</tw-passagedata><tw-passagedata pid="15" name="Exercise Dog In Backyard" tags="" position="1100,1100" size="100,100">Mercury is very excited to explore the backyard! So many new smells and places. He also needed to go the bathroom. Thanks for letting him get some exercise. 
+(if: $health &gt;= 100)[(go-to:&quot;You Win!&quot;)]</tw-passagedata><tw-passagedata pid="15" name="Exercise Dog In Backyard" tags="" position="1100,1100" size="100,100">
+    <img src="Dog/19.png" width="800" height="600"><img>
+    Mercury is very excited to explore the backyard! So many new smells and places. He also needed to go the bathroom. Thanks for letting him get some exercise. 
 
 Would you like to stay with him in the backyard or let him explore and let him in when he is ready?
 
@@ -192,7 +222,9 @@ You have $money coins.
 Mercury has $health health points.
 
 (if: $health &lt;= 0)[(go-to:&quot;You Lose!&quot;)]
-(if: $health &gt;= 100)[(go-to:&quot;You Win!&quot;)]</tw-passagedata><tw-passagedata pid="16" name="Bring Dog to Spa" tags="" position="1300,0" size="100,100">Amazing! A spa day! Mercury won the lottery with such a generous pet owner like you. You two are really a match made in pet heaven!
+(if: $health &gt;= 100)[(go-to:&quot;You Win!&quot;)]</tw-passagedata><tw-passagedata pid="16" name="Bring Dog to Spa" tags="" position="1300,0" size="100,100">
+    <img src="Dog/34.png" width="800" height="600"><img>
+    Amazing! A spa day! Mercury won the lottery with such a generous pet owner like you. You two are really a match made in pet heaven!
 
 Mercury still needs some love though. What would you two like to do together?
 
@@ -207,7 +239,9 @@ You have $money coins.
 Mercury has $health health points.
 
 (if: $health &lt;= 0)[(go-to:&quot;You Lose!&quot;)]
-(if: $health &gt;= 100)[(go-to:&quot;You Win!&quot;)]</tw-passagedata><tw-passagedata pid="17" name="Give Dog Water" tags="" position="1500,300" size="100,100">Great choice! Wow, Mercury was so thirsty! He is feeling much better. Dehydration can be a cause of tummy aches too. Now that Mercury is feeling better, what would you like to do together?
+(if: $health &gt;= 100)[(go-to:&quot;You Win!&quot;)]</tw-passagedata><tw-passagedata pid="17" name="Give Dog Water" tags="" position="1500,300" size="100,100">
+    <img src="Dog/13.png" width="800" height="600"><img>
+    Great choice! Wow, Mercury was so thirsty! He is feeling much better. Dehydration can be a cause of tummy aches too. Now that Mercury is feeling better, what would you like to do together?
 
 Pet Murcury! [[Pet Dog]] 
 Feed Mercury! [[Feed Dog]]
@@ -219,7 +253,9 @@ You have $money coins.
 Mercury has $health health points.
 
 (if: $health &lt;= 0)[(go-to:&quot;You Lose!&quot;)]
-(if: $health &gt;= 100)[(go-to:&quot;You Win!&quot;)]</tw-passagedata><tw-passagedata pid="18" name="Bring Dog To Vet" tags="" position="1300,550" size="100,100">Good choice! Going to the vet is expensive but necessary sometimes. Thanks for looking out for Mercury. You&#39;ve done a great job of taking care of him.
+(if: $health &gt;= 100)[(go-to:&quot;You Win!&quot;)]</tw-passagedata><tw-passagedata pid="18" name="Bring Dog To Vet" tags="" position="1300,550" size="100,100">
+    <img src="Dog/28.png" width="800" height="600"><img>
+    Good choice! Going to the vet is expensive but necessary sometimes. Thanks for looking out for Mercury. You&#39;ve done a great job of taking care of him.
 
 The vet already fixed Mercury up and he is feeling much better. He&#39;s ready to go back home.
 
@@ -238,7 +274,9 @@ You have $money coins.
 Mercury has $health health points.
 
 (if: $health &lt;= 0)[(go-to:&quot;You Lose!&quot;)]
-(if: $health &gt;= 100)[(go-to:&quot;You Win!&quot;)]</tw-passagedata><tw-passagedata pid="19" name="Give Dog Medicine" tags="" position="1300,650" size="100,100">Nice! Thank goodness you had some extra medicine at home. It might be expensive, but medicine is necessary sometimes. Thanks for looking out for Mercury. You&#39;ve done a great job of taking care of him. He is feeling much better. 
+(if: $health &gt;= 100)[(go-to:&quot;You Win!&quot;)]</tw-passagedata><tw-passagedata pid="19" name="Give Dog Medicine" tags="" position="1300,650" size="100,100">
+    <img src="Dog/12.png" width="800" height="600"><img>
+    Nice! Thank goodness you had some extra medicine at home. It might be expensive, but medicine is necessary sometimes. Thanks for looking out for Mercury. You&#39;ve done a great job of taking care of him. He is feeling much better. 
 
 Would you like to continue nurturing him or get back to activities?
 
@@ -255,7 +293,9 @@ You have $money coins.
 Mercury has $health health points.
 
 (if: $health &lt;= 0)[(go-to:&quot;You Lose!&quot;)]
-(if: $health &gt;= 100)[(go-to:&quot;You Win!&quot;)]</tw-passagedata><tw-passagedata pid="20" name="Take Care of Dog at Home" tags="" position="1300,750" size="100,100">A great sentiment to save money, but Mercury is still not feeling better! Would you like to reconsider your decision to get Mercury some help, or let him wear off the tummy ache?
+(if: $health &gt;= 100)[(go-to:&quot;You Win!&quot;)]</tw-passagedata><tw-passagedata pid="20" name="Take Care of Dog at Home" tags="" position="1300,750" size="100,100">
+    <img src="Dog/24.png" width="800" height="600"><img>
+    A great sentiment to save money, but Mercury is still not feeling better! Would you like to reconsider your decision to get Mercury some help, or let him wear off the tummy ache?
 
 Go to the vet [[Bring Dog To Vet]] 
 Get Mercury medicine [[Give Dog Medicine]] 
@@ -268,7 +308,9 @@ You have $money coins.
 Mercury has $health health points.
 
 (if: $health &lt;= 0)[(go-to:&quot;You Lose!&quot;)]
-(if: $health &gt;= 100)[(go-to:&quot;You Win!&quot;)]</tw-passagedata><tw-passagedata pid="21" name="Walk Dog On Leash" tags="" position="1300,900" size="100,100">Smart choice! You don&#39;t want Mercury to escape the sidewalk and hit any cars. Thanks for being so responsible.
+(if: $health &gt;= 100)[(go-to:&quot;You Win!&quot;)]</tw-passagedata><tw-passagedata pid="21" name="Walk Dog On Leash" tags="" position="1300,900" size="100,100">
+    <img src="Dog/22.png" width="800" height="600"><img>
+    Smart choice! You don&#39;t want Mercury to escape the sidewalk and hit any cars. Thanks for being so responsible.
 
 Where should you go on your walk?
 
@@ -280,7 +322,9 @@ You have $money coins.
 Mercury has $health health points.
 
 (if: $health &lt;= 0)[(go-to:&quot;You Lose!&quot;)]
-(if: $health &gt;= 100)[(go-to:&quot;You Win!&quot;)]</tw-passagedata><tw-passagedata pid="22" name="Walk Dog Without Leash" tags="" position="1300,1000" size="100,100">Darn! Mercury isn&#39;t trained to stay on the sidewalk just yet. He ran into the road and got hit by a car! 
+(if: $health &gt;= 100)[(go-to:&quot;You Win!&quot;)]</tw-passagedata><tw-passagedata pid="22" name="Walk Dog Without Leash" tags="" position="1300,1000" size="100,100">
+    <img src="Dog/27.png" width="800" height="600"><img>
+    Darn! Mercury isn&#39;t trained to stay on the sidewalk just yet. He ran into the road and got hit by a car! 
 
 How should you help him?
 
@@ -294,7 +338,9 @@ You have $money coins.
 Mercury has $health health points.
 
 (if: $health &lt;= 0)[(go-to:&quot;You Lose!&quot;)]
-(if: $health &gt;= 100)[(go-to:&quot;You Win!&quot;)]</tw-passagedata><tw-passagedata pid="23" name="Supervise Dog In Backyard" tags="" position="1300,1100" size="100,100">A very smart choice! Since Mercury is so small, you never know what he could get into! Mercury has explored his new home and gone to the bathroom. He&#39;s ready for a new activity. 
+(if: $health &gt;= 100)[(go-to:&quot;You Win!&quot;)]</tw-passagedata><tw-passagedata pid="23" name="Supervise Dog In Backyard" tags="" position="1300,1100" size="100,100">
+    <img src="Dog/21.png" width="800" height="600"><img>
+    A very smart choice! Since Mercury is so small, you never know what he could get into! Mercury has explored his new home and gone to the bathroom. He&#39;s ready for a new activity. 
 
 What would you two like to do together?
 
@@ -307,7 +353,9 @@ You have $money coins.
 Mercury has $health health points.
 
 (if: $health &lt;= 0)[(go-to:&quot;You Lose!&quot;)]
-(if: $health &gt;= 100)[(go-to:&quot;You Win!&quot;)]</tw-passagedata><tw-passagedata pid="24" name="Unsupervise Dog In Backyard" tags="" position="1300,1200" size="100,100">Not the best idea! It&#39;s ok. Every pet owner makes mistakes at first. Owning a dog is a not of responsibility. Unfortunately, there was a coyote in your backyard who attacked Mercury while you were inside. He&#39;s been bitten.
+(if: $health &gt;= 100)[(go-to:&quot;You Win!&quot;)]</tw-passagedata><tw-passagedata pid="24" name="Unsupervise Dog In Backyard" tags="" position="1300,1200" size="100,100">
+    <img src="Dog/20.png" width="800" height="600"><img>
+    Not the best idea! It&#39;s ok. Every pet owner makes mistakes at first. Owning a dog is a not of responsibility. Unfortunately, there was a coyote in your backyard who attacked Mercury while you were inside. He&#39;s been bitten.
 
 How would you like to help him?
 
@@ -321,7 +369,9 @@ You have $money coins.
 Mercury has $health health points.
 
 (if: $health &lt;= 0)[(go-to:&quot;You Lose!&quot;)]
-(if: $health &gt;= 100)[(go-to:&quot;You Win!&quot;)]</tw-passagedata><tw-passagedata pid="25" name="Walk Dog In Park" tags="" position="1500,800" size="100,100">Whoopsies! The dog park was a great idea to help Mercury make new friends, but unfortunately not everyone&#39;s pet is as nice as Mercury. One of the other dogs bit Mercury and he is bleeding! 
+(if: $health &gt;= 100)[(go-to:&quot;You Win!&quot;)]</tw-passagedata><tw-passagedata pid="25" name="Walk Dog In Park" tags="" position="1500,800" size="100,100">
+    <img src="Dog/23.png" width="800" height="600"><img>
+    Whoopsies! The dog park was a great idea to help Mercury make new friends, but unfortunately not everyone&#39;s pet is as nice as Mercury. One of the other dogs bit Mercury and he is bleeding! 
 
 How would you like to help him?
 
@@ -335,7 +385,9 @@ You have $money coins.
 Mercury has $health health points.
 
 (if: $health &lt;= 0)[(go-to:&quot;You Lose!&quot;)]
-(if: $health &gt;= 100)[(go-to:&quot;You Win!&quot;)]</tw-passagedata><tw-passagedata pid="26" name="Walk Dog In Pool" tags="" position="1500,900" size="100,100">Oops! A great idea, but Mercury doesn&#39;t know how to swim! You had to jump into the pool to rescue him and carry him back home. Don&#39;t worry too much. He made is home safe.
+(if: $health &gt;= 100)[(go-to:&quot;You Win!&quot;)]</tw-passagedata><tw-passagedata pid="26" name="Walk Dog In Pool" tags="" position="1500,900" size="100,100">
+    <img src="Dog/25.png" width="800" height="600"><img>
+    Oops! A great idea, but Mercury doesn&#39;t know how to swim! You had to jump into the pool to rescue him and carry him back home. Don&#39;t worry too much. He made is home safe.
 
 Now that you are back home, what would you two like to do together?
 
@@ -348,7 +400,9 @@ You have $money coins.
 Mercury has $health health points.
 
 (if: $health &lt;= 0)[(go-to:&quot;You Lose!&quot;)]
-(if: $health &gt;= 100)[(go-to:&quot;You Win!&quot;)]</tw-passagedata><tw-passagedata pid="27" name="Walk Dog In Neighborhood" tags="" position="1500,1000" size="100,100">Nice! Mercury loves his new home. He is feeling much better after he got to walk off some of his extra energy and go to the bathroom. 
+(if: $health &gt;= 100)[(go-to:&quot;You Win!&quot;)]</tw-passagedata><tw-passagedata pid="27" name="Walk Dog In Neighborhood" tags="" position="1500,1000" size="100,100">
+    <img src="Dog/26.png" width="800" height="600"><img>
+    Nice! Mercury loves his new home. He is feeling much better after he got to walk off some of his extra energy and go to the bathroom. 
 
 Now that you are back home, what would you two like to do together?
 
@@ -362,7 +416,9 @@ Mercury has $health health points.
 
 (if: $health &lt;= 0)[(go-to:&quot;You Lose!&quot;)]
 (if: $health &gt;= 100)[(go-to:&quot;You Win!&quot;)]
-</tw-passagedata><tw-passagedata pid="28" name="Do Not Bring Dog to Spa" tags="" position="1300,100" size="100,100">That&#39;s ok! Mercury is lucky to have such a financially responsible owner like you. 
+</tw-passagedata><tw-passagedata pid="28" name="Do Not Bring Dog to Spa" tags="" position="1300,100" size="100,100">
+    <img src="Dog/32.png" width="800" height="600"><img>
+    That&#39;s ok! Mercury is lucky to have such a financially responsible owner like you. 
 What would you two like to do together instead?
 
 Pet Murcury! [[Pet Dog]] 
@@ -373,7 +429,9 @@ You have $money coins.
 Mercury has $health health points.
 
 (if: $health &lt;= 0)[(go-to:&quot;You Lose!&quot;)]
-(if: $health &gt;= 100)[(go-to:&quot;You Win!&quot;)]</tw-passagedata><tw-passagedata pid="29" name="Feed Dog More" tags="" position="1300,300" size="100,100">Oops! Mercury isn&#39;t used to having such a full tummy! Now he&#39;s too full and has a tummy ache. 
+(if: $health &gt;= 100)[(go-to:&quot;You Win!&quot;)]</tw-passagedata><tw-passagedata pid="29" name="Feed Dog More" tags="" position="1300,300" size="100,100">
+    <img src="Dog/9.png" width="800" height="600"><img>
+    Oops! Mercury isn&#39;t used to having such a full tummy! Now he&#39;s too full and has a tummy ache. 
 
 How would you like to help him?
 
@@ -388,7 +446,9 @@ You have $money coins.
 Mercury has $health health points.
 
 (if: $health &lt;= 0)[(go-to:&quot;You Lose!&quot;)]
-(if: $health &gt;= 100)[(go-to:&quot;You Win!&quot;)]</tw-passagedata><tw-passagedata pid="30" name="Do Not Feed Dog More" tags="" position="1300,400" size="100,100">Good choice! Mercury might still be hungry, but you don&#39;t want to let him eat too much and get a stomach ache!
+(if: $health &gt;= 100)[(go-to:&quot;You Win!&quot;)]</tw-passagedata><tw-passagedata pid="30" name="Do Not Feed Dog More" tags="" position="1300,400" size="100,100">
+    <img src="Dog/10.png" width="800" height="600"><img>
+    Good choice! Mercury might still be hungry, but you don&#39;t want to let him eat too much and get a stomach ache!
 
 He still needs some extra love though. What would you two like to do together?
 
@@ -400,7 +460,9 @@ You have $money coins.
 Mercury has $health health points.
 
 (if: $health &lt;= 0)[(go-to:&quot;You Lose!&quot;)]
-(if: $health &gt;= 100)[(go-to:&quot;You Win!&quot;)]</tw-passagedata><tw-passagedata pid="31" name="Let Dog Sleep" tags="" position="1500,400" size="100,100">Great choice! What a big day Mercury is having! He didn&#39;t know how much he needed a nap! Thanks for letting him rest. Looks like he is already waking up feeling much better.
+(if: $health &gt;= 100)[(go-to:&quot;You Win!&quot;)]</tw-passagedata><tw-passagedata pid="31" name="Let Dog Sleep" tags="" position="1500,400" size="100,100">
+    <img src="Dog/14.png" width="800" height="600"><img>
+    Great choice! What a big day Mercury is having! He didn&#39;t know how much he needed a nap! Thanks for letting him rest. Looks like he is already waking up feeling much better.
 
 Now what would you like to do together?
 
@@ -414,11 +476,16 @@ You have $money coins.
 Mercury has $health health points.
 
 (if: $health &lt;= 0)[(go-to:&quot;You Lose!&quot;)]
-(if: $health &gt;= 100)[(go-to:&quot;You Win!&quot;)]</tw-passagedata><tw-passagedata pid="32" name="You Win!" tags="" position="1700,400" size="100,100">Great job! You truly know how to take care of a pet! Responsibility is one of your best qualities. Since you&#39;re so good at this, would you like to go back to the pet shelter and adopt another pet? If not, we appreciate all the great work. You are really making a difference in the world. You and your pet live happily ever after.
+(if: $health &gt;= 100)[(go-to:&quot;You Win!&quot;)]</tw-passagedata><tw-passagedata pid="32" name="You Win!" tags="" position="1700,400" size="100,100">
+    <img src="Dog/30.png" width="800" height="600"><img>
+    Great job! You truly know how to take care of a pet! Responsibility is one of your best qualities. Since you&#39;re so good at this, would you like to go back to the pet shelter and adopt another pet? If not, we appreciate all the great work. You are really making a difference in the world. You and your pet live happily ever after.
 
-Yes [[Pet Shelter]] </tw-passagedata><tw-passagedata pid="33" name="You Lose!" tags="" position="1700,500" size="100,100">Oh no! You&#39;ve let your pet&#39;s health get so low that we had to call animal services! It looks like you need some more practice before becoming a full time pet owner. Would you like to go back to the shelter and get another chance at the adoption process? If not it&#39;s ok. Pets are not for everyone. We appreciate your effort.
+Yes [[Pet Shelter]] </tw-passagedata><tw-passagedata pid="33" name="You Lose!" tags="" position="1700,500" size="100,100">
+    <img src="Dog/29.png" width="800" height="600"><img>
+    Oh no! You&#39;ve let your pet&#39;s health get so low that we had to call animal services! It looks like you need some more practice before becoming a full time pet owner. Would you like to go back to the shelter and get another chance at the adoption process? If not it&#39;s ok. Pets are not for everyone. We appreciate your effort.
 
-Yes [[Pet Shelter]] </tw-passagedata><tw-passagedata pid="34" name="Cat Adoption" tags="" position="500,2000" size="100,100">Thanks for adopting Mars! We know you&#39;ll love her. She is the sweetest. You&#39;re really helping to turn her life around. 
+Yes [[Pet Shelter]] </tw-passagedata><tw-passagedata pid="34" name="Cat Adoption" tags="" position="500,2000" size="100,100">
+    Thanks for adopting Mars! We know you&#39;ll love her. She is the sweetest. You&#39;re really helping to turn her life around. 
 
 Looks like your first step as a pet owner will be going to the store! Mars needs some special goods to feel at home.
 
